@@ -11,6 +11,286 @@
 */
 
 .page {
+  max-width: 700px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--text-weight);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 98px 0;
+}
+
+.header__container {
+  height: var(--header-logo-size);
+  align-items: flex-start;
+  gap: var(--header-container-gap);
+  border: 2px solid #000;
+  padding: var(--header-container-padding);
+  background-color: #fff;
+  min-height: 327px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo-link {
+  display: grid;
+  gap: 20px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header__logo {
+  color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-family: var(--accent-font);
+  font-weight: normal;
+  transition: transform 0.3s ease;
+  font-size: clamp(3.0625rem, 2.7117rem + 1.4967vw, 4.0625rem);
+}
+.logo_header {
+  font-size: var(--logo-size);
+}
+
+.header__logo:hover {
+  transform: scale(1.05);
+}
+/* Добавьте эти стили после существующих стилей */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card {
+  border: 2px solid #000;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--title-weight);
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 4px 10px;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card__icon-button:focus {
+  outline: none;
+  border: 2px solid var(--main-color);
+}
+
+.card__like-button:focus {
+  outline: none;
+  border: 2px solid var(--main-color);
+  box-shadow: 1px 1px 2px 2px var(--main-color);
+}
+.filter2 {
+  filter: grayscale(80%);
+}
+
+.filter3 {
+  filter: saturate(400%);
+}
+
+/* Фильтр 4: Спринт 2 - сдвиг оттенка */
+.filter4 {
+  filter: hue-rotate(30deg);
+}
+
+.filter5 {
+  filter: invert(80%);
+}
+
+.filter6 {
+  filter: sepia(90%);
+}
+
+.filter7 {
+  filter: blur(20px);
+}
+
+.filter8 {
+  filter: saturate(200%) invert(30%) hue-rotate(90deg) blur(2px) grayscale(10%);
+}
+
+.card__description {
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--text-weight);
+  font-size: 18px;
+  line-height: 21px;
+  padding-right: 1px;
+}
+.card__text {
+  display: grid;
+  gap: 25px;
+  padding: 25px;
+}
+
+.card__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+  padding: 0px 25px 25px;
+}
+
+.card__icon-button {
+  background: none;
+  border: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: border-color 0.3s ease; /* Добавьте плавный переход */
+}
+
+.card__like-button {
+  min-width: 130px;
+  min-height: 38px;
+  border: 2px solid var(--main-color);
+  color: var(--button-color);
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: border-color 0.3s ease; /* Добавьте плавный переход */
+}
+.card__save-button {
+  background-color: #fff;
+  padding: 15px 20px;
+}
+@media (width <= 376px) {
+  .card__save-button {
+    flex-direction: column;
+  }
+}
+
+.card__like-button svg {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.card__like-button:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__like-button:hover:after {
+  transform: scaleX(1);
+}
+
+.button__text {
+  font-family: var(--accent-font);
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  mix-blend-mode: difference;
+  font-size: 14px;
+}
+
+.footer__button {
+  margin-top: 48px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+#my-popover {
+  font-family: var(--accent-font);
+  max-width: 341px;
+  border: 1px solid;
+  padding: 30px 40px;
+}
+#my-popover::backdrop {
+  background-color: rgb(0 0 0 / 0.5);
+}
+.popover__text {
+  font-size: 14px;
+  color: var(--main-bg-color);
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.icon {
+  color: var(--main-color);
+  width: 39px;
+}
+
+.icon-big {
+  width: 28px;
+}
+
+/* Добавляем после стилей для .card__image */
+.image-wrapper {
+  border: 2px solid #000;
+  position: relative;
+}
+
+.text-label {
+  font-family: var(--accent-font);
+  position: absolute;
+  top: 0;
+  right: 0; /* Позиционируем лейбл в верхнем правом углу */
+  color: rgba(0, 0, 0, 0.7);
+  margin: 25px;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+  font-size: 14px;
+  text-shadow:
+    -1px -1px 0 var(--outline-color),
+    1px -1px 0 var(--outline-color),
+    -1px 1px 0 var(--outline-color),
+    1px 1px 0 var(--outline-color);
+}
+
+.popover {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.button__text-width {
+  width: 100%;
 }
