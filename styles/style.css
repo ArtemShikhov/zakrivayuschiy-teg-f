@@ -35,7 +35,6 @@
   background-color: #fff;
   min-height: 327px;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -283,7 +282,16 @@
     -1px 1px 0 var(--outline-color),
     1px 1px 0 var(--outline-color);
 }
-
+@supports (
+  (text-stroke: 1px var(--outline-color)) or
+    (-webkit-text-stroke: 1px var(--outline-color))
+) {
+  .text-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--outline-color);
+    text-stroke: 1px var(--outline-color);
+  }
+}
 .popover {
   display: grid;
   grid-template-columns: 1fr auto;
