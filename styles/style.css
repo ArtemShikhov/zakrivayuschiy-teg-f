@@ -220,17 +220,21 @@
   padding: 15px 20px;
   font-family: var(--accent-font);
 }
+
 @media (width <= 376px) {
   .card__save-button {
     flex-direction: column;
   }
 }
+
 .card__save-button::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
+
 .popover {
   max-width: 334px;
 }
+
 .popover__text {
   font-size: 14px;
   color: var(--main-bg-color);
