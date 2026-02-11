@@ -1,6 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --header-background-color: #fff;
+  --border-color: #000;
+  --background-color: #fff;
   --main-color: #000;
   --button-color: #fff;
   --main-bg-color: #000;

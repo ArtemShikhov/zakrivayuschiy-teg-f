@@ -28,9 +28,9 @@
 
 .header__container {
   align-items: flex-start;
-  border: 2px solid #000;
+  border: 2px solid var(--border-color);
   padding: var(--header-container-padding);
-  background-color: var(--header-background-color);
+  background-color: var(--background-color);
   display: flex;
   justify-content: center;
 }
@@ -43,8 +43,7 @@
 }
 
 .header__logo {
-  color: #000;
-
+  color: var(--main-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,8 +69,8 @@
 }
 
 .card {
-  border: 2px solid #000;
-  background-color: #fff;
+  border: 2px solid var(--border-color);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
 }
@@ -96,6 +95,9 @@
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
   box-shadow: 2px 2px var(--main-color);
 }
 
@@ -216,9 +218,14 @@
 }
 
 .card__save-button {
-  background-color: #fff;
+  max-width: 346px;
+  background-color: var(--background-color);
   padding: 15px 20px;
   font-family: var(--accent-font);
+}
+.popover-container {
+  max-width: 346px;
+  padding: 30px 40px;
 }
 
 @media (width <= 376px) {
@@ -232,15 +239,15 @@
 }
 
 .popover {
-  max-width: 334px;
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 20px;
+  gap: 25px;
   align-items: center;
   padding-bottom: 30px;
 }
 
 .popover__text {
+  font-family: var(--accent-font);
   font-size: 14px;
   color: var(--main-bg-color);
   line-height: 150%;
@@ -263,6 +270,7 @@
 }
 
 .icon-big {
+  mix-blend-mode: difference;
   width: 28px;
 }
 

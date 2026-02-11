@@ -1,8 +1,6 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like. */
-
 /* Начальное состояние сердца - прозрачное (только контур виден) */
 .like-icon .core {
-  fill: var(--contour-color);
+  fill: transparent;
   transition: fill 0.3s linear 0.03s;
 }
 
@@ -12,7 +10,7 @@
 }
 
 .like-icon .contour {
-  fill: transparent;
+  fill: var(--contour-color);
   transition: fill 0.1s linear;
 }
 
@@ -36,7 +34,7 @@
   transition: fill 0.1s linear;
 }
 .like-icon:active .contour {
-  fill: var(--animation-fill-color);
+  fill: var(--contour-color);
   transition: fill 0.1s linear;
 }
 
