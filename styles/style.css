@@ -233,6 +233,11 @@
 
 .popover {
   max-width: 334px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 30px;
 }
 
 .popover__text {
@@ -292,13 +297,7 @@
     text-stroke: 1px var(--outline-color);
   }
 }
-.popover {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px;
-  align-items: center;
-  padding-bottom: 30px;
-}
+
 .button__text-width {
   width: 100%;
 }
